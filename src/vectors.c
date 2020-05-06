@@ -41,11 +41,11 @@ vec2 vec2_line_norm(vec2 a, vec2 b)
     return d;
 }
 // compute length of double vector 2d
-double vec2d_length(vec2d v){
+INLINE double vec2d_length(vec2d v){
     return sqrt (v.x*v.x + v.y*v.y);
 }
 // compute length of float vector 2d
-float vec2_length(vec2 v){
+INLINE float vec2_length(vec2 v){
     return sqrtf (v.x*v.x + v.y*v.y);
 }
 // normalize float vector
@@ -61,23 +61,23 @@ vec2d vec2d_norm(vec2d a)
     return (vec2d){a.x/m, a.y/m};
 }
 // multiply 2d vector by scalar
-vec2d vec2d_mult(vec2d a, double m){
+INLINE vec2d vec2d_mult(vec2d a, double m){
     return (vec2d){a.x*m,a.y*m};
 }
 // multiply 2d vector by scalar
-vec2 vec2_mult(vec2 a, float m){
+INLINE vec2 vec2_mult(vec2 a, float m){
     return (vec2){a.x*m,a.y*m};
 }
 // compute perpendicular vector
-vec2d vec2d_perp (vec2d a){
+INLINE vec2d vec2d_perp (vec2d a){
     return (vec2d){a.y, -a.x};
 }
 // compute perpendicular vector
-vec2 vec2_perp (vec2 a){
+INLINE vec2 vec2_perp (vec2 a){
     return (vec2){a.y, -a.x};
 }
 // convert double precision vector to single precision
-vec2 vec2d_to_vec2(vec2d vd){
+INLINE vec2 vec2d_to_vec2(vec2d vd){
     return (vec2){(float)vd.x,(float)vd.y};
 }
 // compute sum of two single precision vectors
@@ -85,15 +85,15 @@ vec2 vec2_add (vec2 a, vec2 b){
     return (vec2){a.x + b.x, a.y + b.y};
 }
 // compute sum of two double precision vectors
-vec2d vec2d_add (vec2d a, vec2d b){
+INLINE vec2d vec2d_add (vec2d a, vec2d b){
     return (vec2d){a.x + b.x, a.y + b.y};
 }
 // compute subbstraction of two single precision vectors
-vec2 vec2_sub (vec2 a, vec2 b){
+INLINE vec2 vec2_sub (vec2 a, vec2 b){
     return (vec2){a.x - b.x, a.y - b.y};
 }
 // compute subbstraction of two double precision vectors
-vec2d vec2d_sub (vec2d a, vec2d b){
+INLINE vec2d vec2d_sub (vec2d a, vec2d b){
     return (vec2d){a.x - b.x, a.y - b.y};
 }
 // test equality of two single precision vectors

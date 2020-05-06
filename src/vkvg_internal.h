@@ -29,6 +29,12 @@
 #include <stdbool.h>
 #include <float.h>
 
+#ifdef _WIN32
+    #define INLINE __inline
+#elif __unix__
+    #define INLINE inline
+#endif
+
 #define _USE_MATH_DEFINES
 #include <math.h>
 
