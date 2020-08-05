@@ -43,7 +43,6 @@ void _init_fonts_cache (VkvgDevice dev){
 
 
 #ifdef VKVG_LCD_FONT_FILTER
-	FT_CHECK_RESULT(FT_Library_SetLcdFilter (cache->library, FT_LCD_FILTER_LIGHT));
 	cache->texFormat = FB_COLOR_FORMAT;
 	cache->texPixelSize = 4;
 #else
